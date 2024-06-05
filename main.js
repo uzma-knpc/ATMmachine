@@ -34,8 +34,13 @@ if (myans.pin === mypin) {
                 }
             ]);
             mybalaance = mybalaance - myamount.amount;
-            console.log(`Your remaining Balance is ${mybalaance} $`);
-            console.log("__________________________________________");
+            if (mybalaance < 0) {
+                console.log(`Your remaining Balance is Insufficient`);
+            }
+            else {
+                console.log(`Your remaining Balance is ${mybalaance} $`);
+                console.log("__________________________________________");
+            }
         }
         else if (myoption.choice === "SubmitYourBILL") {
             let mybillamount = await inquirer.prompt([
@@ -46,8 +51,13 @@ if (myans.pin === mypin) {
                 }
             ]);
             mybalaance = mybalaance - mybillamount.billamount;
-            console.log(`Your remaining Balance is ${mybalaance} $`);
-            console.log("__________________________________________");
+            if (mybalaance < 0) {
+                console.log(`Your remaining Balance is Insufficient`);
+            }
+            else {
+                console.log(`Your remaining Balance is ${mybalaance} $`);
+                console.log("__________________________________________");
+            }
         }
         let repeat = await inquirer.prompt([
             {

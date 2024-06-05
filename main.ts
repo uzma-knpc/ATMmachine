@@ -42,8 +42,14 @@ else if(myoption.choice==="cashwithdrwl"){
  ])
  
   mybalaance=mybalaance-myamount.amount
- console.log(`Your remaining Balance is ${mybalaance} $`)
- console.log("__________________________________________")
+  if (mybalaance<0){
+    console.log(`Your remaining Balance is Insufficient`)
+ }
+ else {
+    console.log(`Your remaining Balance is ${mybalaance} $`)
+    console.log("__________________________________________")
+
+ }
 
 }
 
@@ -57,9 +63,15 @@ else if(myoption.choice==="SubmitYourBILL"){
     ])
     
      mybalaance=mybalaance-mybillamount.billamount
-    console.log(`Your remaining Balance is ${mybalaance} $`)
-    console.log("__________________________________________")
-
+     if (mybalaance<0){
+        console.log(`Your remaining Balance is Insufficient`)
+     }
+     else {
+        console.log(`Your remaining Balance is ${mybalaance} $`)
+        console.log("__________________________________________")
+    
+     }
+    
    }
 
 
